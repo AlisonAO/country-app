@@ -1,0 +1,25 @@
+<h1>Countries#edit</h1>
+<p>Find me in app/views/countries/edit.html.erb</p>
+
+<form action="/countries/<%= @countries.id %>" method="POST">
+	<%= token_tag %>
+
+	<label for= "name_of_country">Name:</label>
+	<input type="text" name="name_of_country" value="<%= @countries.name_of_country %>" placeholder= "Name">
+
+	<label for="population_of_country"></label>
+	<textarea name="population_of_country" placeholder="Population"><%= @countries.population_of_country %></textarea>
+
+	<label for="flag_url"></label>
+	<textarea name="flag_url" placeholder="Flag URL"><%= @countries.flag_url%></textarea>
+
+	<label for="first_language"></label>
+	<textarea name="first_language" placeholder="Official Language"><%= @countries.first_language %></textarea>
+
+	<label for="name_of_preseident"></label>
+	<textarea name="name_of_preseident" placeholder="President/Prime Minister"><%= @countries.name_of_preseident %></textarea>
+
+	<input type="hidden" name="_method" value="PUT">
+	<input type="submit" value="Save">
+
+</form>

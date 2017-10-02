@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_of_country: MyText
+  population_of_country: MyText
+  flag_url: MyText
+  first_language: MyText
+  name_of_preseident: MyText
+
+two:
+  name_of_country: MyText
+  population_of_country: MyText
+  flag_url: MyText
+  first_language: MyText
+  name_of_preseident: MyText

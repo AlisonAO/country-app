@@ -1,0 +1,24 @@
+<h1>Countries</h1>
+
+
+<a href="/countries/new">Click here to add another country!</a>
+
+<%= @countries.each do |country| %>
+	<h2><%= country.name_of_country %></h2>
+	<p>Population: <%= country.population_of_country %></p> 
+
+	<p><%= country.flag_url %></p> 
+	<img src="<%= country.flag_url%>" class="flags" alt="Jamaican Flag" height="300" width="500">
+	<p>Official Language: <%= country.first_language %></p> 
+	<p>President/Prime Minister: <%= country.name_of_preseident %></p> 
+
+	<a href="/countries/<%= country.id %>">Show Page</a>
+	<a href="/countries/<%= country.id %>/edit">Edit Page</a>
+
+	<form action="/countries/<%= country.id %>" method="POST">
+		<%= token_tag %>
+		<input type= "hidden" name="_method" value="Delete">
+		<input type="submit" value="Delete">
+	</form>
+
+ <% end %>
