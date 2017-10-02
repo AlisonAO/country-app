@@ -3,7 +3,7 @@
 
 <a href="/countries/new">Click here to add another country!</a>
 
-<%= @countries.each do |country| %>
+<% @countries.each do |country| %>
 	<h2><%= country.name_of_country %></h2>
 	<p>Population: <%= country.population_of_country %></p> 
 
@@ -12,8 +12,11 @@
 	<p>Official Language: <%= country.first_language %></p> 
 	<p>President/Prime Minister: <%= country.name_of_preseident %></p> 
 
-	<a href="/countries/<%= country.id %>">Show Page</a>
-	<a href="/countries/<%= country.id %>/edit">Edit Page</a>
+	<a href="/countries/<%= country.id %>">Show</a>
+	<a href="/countries/<%= country.id %>/edit">Edit</a>
+
+	<br>
+	<br>
 
 	<form action="/countries/<%= country.id %>" method="POST">
 		<%= token_tag %>
